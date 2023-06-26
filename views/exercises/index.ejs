@@ -1,0 +1,27 @@
+<%- include('../partials/header') %>
+
+<h2>Exercise Log</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Sunday</th>
+      <th>Monday</th>
+      <th>Tuesday</th>
+      <th>Wednesday</th>
+      <th>Thursday</th>
+      <th>Friday</th>
+      <th>Saturday</th>
+    </tr>
+  </thead>
+<tbody>
+  <% exercises.forEach(function(e) { %>
+    <tr>
+      <td><a href="/exercises/<%=e._id%> "> <%= e.name %> </a></td>
+    </tr>
+ <% }); %>
+</tbody>
+</table>
+
+
+
+<%- include('../partials/footer') %>
