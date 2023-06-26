@@ -1,12 +1,20 @@
 <%- include('../partials/header') %>
 
 <h2>Exercise Details</h2>
-
-<h3><%= exercise.name %></h3>
-<h3>Sets: <%= exercise.sets %></h3>
-<h3>Reps: <%= exercise.reps %></h3>
-<h3>Weight: <%= exercise.weight %></h3>
-
-
+<table>
+  <tr>
+    <h3><%= exercise.name %></h3>
+    <td><iframe width="560" height="315" src="<%= exercise.video %>"></iframe></td>
+    <td>Sets: <%= exercise.sets %></td>
+    <td>Reps: <%= exercise.reps %></td>
+    <td>Weight: <%= exercise.weight %></td>
+    <td><a href="/exercises/<%= exercise._id %>/edit">Edit Exercise</a></td>
+    <td>
+      <form method="POST" action="/exercises/<%= exercise._id %>?_method=DELETE">
+      <button type="submit">Remove Exercise</button>
+      </form>
+    </td>
+  </tr> 
+</table>
 
 <%- include('../partials/footer') %>

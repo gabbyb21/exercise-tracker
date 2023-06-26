@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+
+<h2>Edit Exercise</h2>
+<form action="/exercises/<%= exercise._id %>?_method=PUT" method="POST">
+  <!-- <input type="hidden" name="_method" value="PUT"> -->
+  <input placeholder="Exercise" type="text" name="name" value="<%= exercise.name %>">
+  <input placeholder="Video URL" type="url" name="video" value="<%= exercise.video %>">
+  <input placeholder="Sets" type="number" name="sets" value="<%= exercise.sets %>">
+  <input placeholder="Reps" type="number" name="reps" value="<%= exercise.reps %>">
+  <input placeholder="Weight" type="text" name="weight" value="<%= exercise.weight%>">
+  <input type="submit" value="Update Exercise">
+
+</form>
+
+<%- include('../partials/footer') %>

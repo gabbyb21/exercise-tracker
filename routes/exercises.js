@@ -13,7 +13,11 @@ router.post('/', exercisesCtrl.create);
 
 router.get('/:id', exercisesCtrl.show);
 
+router.get('/:id/edit', exercisesCtrl.edit);
 
+router.put('/:id', exercisesCtrl.update);
+
+router.delete('/:id', exercisesCtrl.delete);
 
 
 module.exports = router;
