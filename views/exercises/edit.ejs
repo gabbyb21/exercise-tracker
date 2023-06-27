@@ -1,13 +1,18 @@
 <%- include('../partials/header') %>
+<link rel='stylesheet' href='/stylesheets/edit.css'/>
 
 <h2>Edit Exercise</h2>
 <form action="/exercises/<%= exercise._id %>?_method=PUT" method="POST">
-  <!-- <input type="hidden" name="_method" value="PUT"> -->
   <input placeholder="Exercise" type="text" name="name" value="<%= exercise.name %>">
+  <br>
   <input placeholder="Video URL" type="url" name="video" value="<%= exercise.video %>">
+  <br>
   <input placeholder="Sets" type="number" name="sets" value="<%= exercise.sets %>">
+  <br>
   <input placeholder="Reps" type="number" name="reps" value="<%= exercise.reps %>">
+  <br>
   <input placeholder="Weight" type="text" name="weight" value="<%= exercise.weight%>">
+  <br>
   <input type="submit" value="Update Exercise">
 
 </form>

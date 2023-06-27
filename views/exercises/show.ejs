@@ -1,20 +1,20 @@
 <%- include('../partials/header') %>
+<link rel='stylesheet' href='/stylesheets/show.css'/>
 
 <h2>Exercise Details</h2>
-<table>
-  <tr>
+<!-- <table>
+  <tr> -->
     <h3><%= exercise.name %></h3>
-    <td><iframe width="560" height="315" src="<%= exercise.video %>"></iframe></td>
-    <td>Sets: <%= exercise.sets %></td>
-    <td>Reps: <%= exercise.reps %></td>
+    <td><div class="video"><iframe width="560" height="315" src="<%= exercise.video %>"></iframe></div></td>
+    <td>Sets: <%= exercise.sets %></td> |
+    <td>Reps: <%= exercise.reps %></td> |
     <td>Weight: <%= exercise.weight %></td>
-    <td><a href="/exercises/<%= exercise._id %>/edit">Edit Exercise</a></td>
-    <td>
       <form method="POST" action="/exercises/<%= exercise._id %>?_method=DELETE">
-      <button type="submit">Remove Exercise</button>
+      <button type="submit">Delete</button>
+      <a href="/exercises/<%= exercise._id %>/edit">Edit Exercise</a>
       </form>
     </td>
-  </tr> 
-</table>
+  <!-- </tr> 
+</table> -->
 
 <%- include('../partials/footer') %>

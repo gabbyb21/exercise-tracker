@@ -1,0 +1,12 @@
+input,
+textarea,
+button {
+  width: 150px;
+  padding: 0;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Saira Condensed', sans-serif;
+}

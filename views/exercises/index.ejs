@@ -1,17 +1,11 @@
 <%- include('../partials/header') %>
+<link rel='stylesheet' href='/stylesheets/index.css'/>
 
-<h2>Exercise Log</h2>
+<h2>Today's Workout</h2>
+<% let date = new Date().toDateString() %>
+<h3><%= date %></h3>
 <table>
   <thead>
-    <tr>
-      <th>Sunday</th>
-      <th>Monday</th>
-      <th>Tuesday</th>
-      <th>Wednesday</th>
-      <th>Thursday</th>
-      <th>Friday</th>
-      <th>Saturday</th>
-    </tr>
   </thead>
 <tbody>
   <% exercises.forEach(function(e) { %>

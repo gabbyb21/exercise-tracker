@@ -52,7 +52,7 @@ async function update(req, res) {
       video: req.body.video,
       sets: req.body.sets,
       reps: req.body.reps,
-      weight: req.body.weights
+      weight: req.body.weight
     };
     await Exercise.findByIdAndUpdate(req.params.id, updatedExercise);
       const exercises = await Exercise.find()
