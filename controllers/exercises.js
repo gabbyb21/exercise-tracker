@@ -20,7 +20,7 @@ async function create(req, res) {
     await Exercise.create(req.body);
     res.redirect('/exercises');
   } catch (err) {
-    res.render('exercises/new')
+    res.render('exercises/new');
   }
 }
 
