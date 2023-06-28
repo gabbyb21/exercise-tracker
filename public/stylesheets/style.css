@@ -1,8 +1,11 @@
 body {
   padding: 50px;
   font-family: 'Saira Condensed', sans-serif;
+  background-image: url('/images/background.jpeg');
+  background-size: cover;
+  color: white;
 }
 
 a {
-  color:lightseagreen;
+  color:aqua;
 }

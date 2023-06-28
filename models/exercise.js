@@ -6,7 +6,7 @@ const exerciseSchema = new Schema({
   sets: Number, 
   reps: Number, 
   weight: String,
-  video: String
+  video: String,
 });
 
 module.exports = mongoose.model('Exercise', exerciseSchema);
